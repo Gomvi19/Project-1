@@ -1,0 +1,22 @@
+//Victor Gomez
+//COP 3330C
+//08/20/25
+//Program creates 2 classes of shoes creates a custom method for both, then instantiates the classes and modifies them, and uses the custom methods
+//Inputs include weight, material types, prices, if the shoe is water-resistant and will output modifications to the objects as well as shipping cost and how many hours will the shoes take to dry if they're water-resistant
+public class ShoeApp {
+    public static void main(String[] args) {
+        soccerShoes superFly = new soccerShoes(7.2,"rubber",49.99);
+        baseballShoes homeBase = new baseballShoes("metal",3,true);
+        superFly.printDetails();
+        homeBase.printDetails();
+        superFly.setPrice(39.99);
+        homeBase.setWaterResistant(false);
+        double cost = superFly.shippingPrice(15);
+        System.out.println("The shipping cost is $" + cost);
+        double time = homeBase.calculateDryingTime(4);
+        System.out.println("The shoes will need " + time + " hours to dry off.");
+        superFly.printDetails();
+        homeBase.printDetails();
+
+    }
+}
